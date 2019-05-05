@@ -8,9 +8,11 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <title>Budget Creator</title>
 </head>
-<body onload="">
+<!--<body>-->
+        <body onload="reset(); updateTotal()">
     <div id="form-body" class="w-100 container">
     <h1 >Budget Creator by Michael Cleverdon</h1>
+<div id="pdf">
  <div id="form">
     <table class="table table-bordered" id="Incomes" >
         <thead class="thead-light">
@@ -45,11 +47,13 @@
         </tr>
     </tbody>
     </table>
+<!--DON'T MOVE-->
 </div>
     <table id="result" style="float: right" class="">
         <tr class="col-2"><td>Total: <input  style="text-align: right" type="text" readonly="true" id="total"></td></tr>
     </table>
-    
+
+</div> 
     <button class="col-2 btn btn-success" value="Submit Form" onclick="submit()">Submit Form</button>
     <button class="col-2 btn btn-danger"  value="Reset Form" onclick="reset()">Reset Form</button>
     <button class="col-2 btn btn-info" onclick="addRow()">Add Row</button>
@@ -59,5 +63,7 @@
     <script src="./js/form.js"></script>
     <script src="./js/reset.js"></script>
     <script src="./js/add.js"></script>
+    <script src="./js/submit.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 </body>
 </html>
