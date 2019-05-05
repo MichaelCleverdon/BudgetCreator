@@ -9,22 +9,25 @@
     <title>Budget Creator</title>
 </head>
 <body onload="">
-    <div id="form-body" class="w-75">
-    <h1 class="mt-20">Budget Creator by Michael Cleverdon</h1>
-    <table class="col-12" id="information" >
-        <thead>
+    <div id="form-body" class="w-100 container">
+    <h1 >Budget Creator by Michael Cleverdon</h1>
+ <div id="form">
+    <table class="table table-bordered" id="Incomes" >
+        <thead class="thead-light">
             <tr>
-                <td>Income</td>
-                <td>Income</td>
-                <td>Expenses</td>
+                <th>Incomes</th>
+                <th>Income</th>
+                <th>Expenses</th>
             </tr>
         </thead>
-        <tbody>
-        <tr>
+        <tbody id="incomes">
+        
+        <tr id="cloneRow">
             <td class="col-8"><input type="text" onkeyup="updateTotal()" class="d-inline form-control form-control-sm" placeholder=""></td>
             <td class="col-2"><input type="text" onkeyup="updateTotal()" class="incomes d-inline form-control form-control-sm" placeholder=""></td>
             <td class="col-2"><input type="text" onkeyup="updateTotal()" class="expenses d-inline form-control form-control-sm" placeholder=""></td>
         </tr>
+  
         <tr>
             <td class="col-8"><input type="text" onkeyup="updateTotal()" class="d-inline form-control form-control-sm" placeholder=""></td>
             <td class="col-2"><input type="text" onkeyup="updateTotal()" class="incomes d-inline form-control form-control-sm" placeholder=""></td>
@@ -42,12 +45,19 @@
         </tr>
     </tbody>
     </table>
-    <table id="result" style="float: right" class="col-4">
-        <tr><td><input  style="text-align: right" type="text" readonly="true" id="total"></td></tr>
+</div>
+    <table id="result" style="float: right" class="">
+        <tr class="col-2"><td>Total: <input  style="text-align: right" type="text" readonly="true" id="total"></td></tr>
     </table>
-    <button class="btn btn-success" value="Submit Form" onclick="submit()">Submit Form</button>
-    <button class="btn btn-danger"  value="Reset Form" onclick="reset()">Reset Form</button>
+    
+    <button class="col-2 btn btn-success" value="Submit Form" onclick="submit()">Submit Form</button>
+    <button class="col-2 btn btn-danger"  value="Reset Form" onclick="reset()">Reset Form</button>
+    <button class="col-2 btn btn-info" onclick="addRow()">Add Row</button>
+    <button class="col-2 btn btn-primary" onclick="addSection()">Add New Section</button>
+
     </div>
     <script src="./js/form.js"></script>
+    <script src="./js/reset.js"></script>
+    <script src="./js/add.js"></script>
 </body>
 </html>
